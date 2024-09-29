@@ -1,0 +1,11 @@
+[package]
+name = "iter-scanb"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["A4-Tacks <wdsjxhno1001@163.com>"]
+keywords = ["data-structure", "iterator", "scan"]
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
