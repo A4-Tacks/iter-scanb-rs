@@ -5,7 +5,7 @@ At the same time,
 it will also be able to implement `ExactSizeIterator` and `FusedIterator`
 
 # Examples
-```
+```rust
 use iter_scanb::IterScanB;
 let a = [1, 2, 3, 4];
 
