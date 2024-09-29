@@ -52,6 +52,7 @@ pub trait IterScanB: Iterator + Sized {
 impl<I: Iterator> IterScanB for I {}
 
 /// Create from [`IterScanB::scanb`]
+#[must_use = "iterators are lazy and do nothing unless consumed"]
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 pub struct ScanB<I, S, F> {
     iter: I,
