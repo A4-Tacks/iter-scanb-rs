@@ -1,10 +1,10 @@
 [package]
 name = "iter-scanb"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 authors = ["A4-Tacks <wdsjxhno1001@163.com>"]
-keywords = ["iterator", "extension", "scan"]
+keywords = ["iterator", "extension", "adapter", "scan"]
 license = "MIT"
 readme = "README.md"
 description = "Extend Iterator::scan, but use B, instead of Option<B>"
