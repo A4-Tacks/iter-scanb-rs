@@ -1,4 +1,4 @@
-Extend `Iterator::scan`, but use `B`, instead of `Option<B>`,
+Like the `Iterator::scan`, but use `B`, instead of `Option<B>`,
 which can bring better `size_hint` and ergonomics.
 
 At the same time,

@@ -5,7 +5,7 @@ use core::{
     iter::FusedIterator,
 };
 
-/// Extend [`Iterator::scan`], but use `B`, instead of `Option<B>`,
+/// Like the [`Iterator::scan`], but use `B`, instead of `Option<B>`,
 /// which can bring better [`size_hint`] and ergonomics.
 ///
 /// At the same time,
@@ -15,7 +15,6 @@ use core::{
 pub trait IterScanB: Iterator + Sized {
     /// An iterator adapter which, like [`Iterator::scan`],
     /// but returns a value of `B` instead of `Option<B>`.
-    ///
     /// which can bring better [`size_hint`] and ergonomics.
     ///
     /// At the same time,
