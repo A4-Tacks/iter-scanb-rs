@@ -60,6 +60,33 @@ pub struct ScanB<I, S, F> {
     state: S,
 }
 
+impl<I, S, F> ScanB<I, S, F> {
+    /// Get the immutable reference of the current state
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// # use iter_scanb::IterScanB;
+    /// let a = [1, 2, 3, 4];
+    ///
+    /// let mut iter = a.iter().scanb(1, |state, &x| {
+    ///     *state *= x;
+    ///     -*state
+    /// });
+    ///
+    /// assert_eq!(iter.state(), &1);
+    ///
+    /// assert_eq!(iter.next(), Some(-1));
+    /// assert_eq!(iter.state(), &1);
+    ///
+    /// assert_eq!(iter.next(), Some(-2));
+    /// assert_eq!(iter.state(), &2);
+    /// ```
+    pub fn state(&self) -> &S {
+        &self.state
+    }
+}
+
 impl<I: Debug, S: Debug, F> Debug for ScanB<I, S, F> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("ScanB")
